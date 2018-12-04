@@ -300,15 +300,5 @@ namespace Microsoft.AspNetCore.Razor.Language.Syntax
 
             return ParserHelpers.VoidElements.Contains(startTag.GetTagName());
         }
-
-        public static bool IsVoidElement(this MarkupEndTagSyntax endTag)
-        {
-            if (endTag == null)
-            {
-                throw new ArgumentNullException(nameof(endTag));
-            }
-
-            return ParserHelpers.VoidElements.Contains(endTag.GetTagName());
-        }
     }
 }

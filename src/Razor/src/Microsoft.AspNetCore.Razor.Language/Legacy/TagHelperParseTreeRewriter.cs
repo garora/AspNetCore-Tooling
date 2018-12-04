@@ -180,7 +180,7 @@ namespace Microsoft.AspNetCore.Razor.Language.Legacy
                             // If there was a corresponding start tag, we would have already added this error.
                             ValidateParentAllowsPlainEndTag(endTag);
                         }
-                        else if (!endTag.IsVoidElement())
+                        else
                         {
                             // Since a start tag exists, we must already be tracking it.
                             // Pop the stack as we're done with the end tag.
