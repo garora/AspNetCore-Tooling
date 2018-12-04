@@ -29,10 +29,16 @@ namespace Microsoft.AspNetCore.Razor.Language.Syntax
 
             public override SyntaxNode Visit(SyntaxNode node)
             {
-                node = base.Visit(node);
-                
                 if (node != null)
                 {
+                    var diagnostics = node.GetDiagnostics();
+                    node = base.Visit(node);
+                    if (diagnostics.Length > 0)
+                    {
+                        // Persist node diagnostics.
+                        node = node.WithDiagnostics(diagnostics);
+                    }
+
                     node = RewriteNode(node);
                 }
 

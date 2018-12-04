@@ -3,7 +3,7 @@ RazorDocument - [0..73)::73 - [@section TestLF{LF    @if(true)LF    {LF        <
         MarkupTextLiteral - [0..0)::0 - [] - Gen<Markup> - SpanEditHandler;Accepts:Any
             Marker;[];
         CSharpCodeBlock - [0..73)::73
-            RazorDirective - [0..73)::73 - Directive:{section;RazorBlock;Unrestricted}
+            RazorDirective - [0..73)::73 - Directive:{section;RazorBlock;Unrestricted} [RZ1006(15:1,0 [1] )]
                 CSharpTransition - [0..1)::1 - Gen<None> - SpanEditHandler;Accepts:None
                     Transition;[@];
                 RazorDirectiveBody - [1..73)::72
